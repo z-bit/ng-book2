@@ -64,7 +64,7 @@ insert:
 ##Router Links
 * ***app.component.html*** holds **Title** and **Link to Home** as part of each component, and the **router-outlet** as spaceholder for the selected component:
 ```angular2html
-    <a href="home">Home</a>
+    <a routerLink="home">Home</a>
     <h1>MyApp</h1>
     <router-outlet></router-outlet>
 ```
@@ -73,7 +73,8 @@ insert:
     <h1>Welcome Home!</h1>
     <strong>Here are your choises:</strong>
     <ul>
-        <li><a href="home">Home</a></li>
-        <li><a href="hello">Hello World App</a></li>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/hello">Hello World App</a></li>
+        ...
     </ul>
 ```

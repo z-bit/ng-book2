@@ -13,6 +13,9 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { FormsComponent } from './forms/forms.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
+import { UserItemComponent } from './hello-world/user-list/user-item/user-item.component';
+import { UserListComponent } from './hello-world/user-list/user-list.component';
+import { ArticleComponent } from './reddit/article/article.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.compon
     InventoryComponent,
     FormsComponent,
     SimpleHttpComponent,
-    YouTubeSearchComponent
+    YouTubeSearchComponent,
+    UserItemComponent,
+    UserListComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
