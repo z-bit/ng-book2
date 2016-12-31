@@ -12,11 +12,11 @@ export const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
     {path: 'hello', component: HelloWorldComponent},
-    {path: 'invetory', component: InventoryComponent},
+    {path: 'inventory', component: InventoryComponent},
     {path: 'reddit', component: RedditComponent},
     {path: 'forms', component: FormsComponent},
     {path: 'http', component: SimpleHttpComponent},
-    {path: 'youtube', component: YouTubeSearchComponent}
+    {path: 'tube', component: YouTubeSearchComponent}   
 ];
     
 

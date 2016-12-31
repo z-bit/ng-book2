@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routing';
 
-
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
