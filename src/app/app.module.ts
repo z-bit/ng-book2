@@ -16,6 +16,13 @@ import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.compon
 import { UserItemComponent } from './hello-world/user-list/user-item/user-item.component';
 import { UserListComponent } from './hello-world/user-list/user-list.component';
 import { ArticleComponent } from './reddit/article/article.component';
+import { BreadcrumpsComponent } from './inventory/breadcrumps/breadcrumps.component';
+import { NavigationComponent } from './inventory/navigation/navigation.component';
+import { ProductListComponent } from './inventory/product-list/product-list.component';
+import { ProductComponent } from './inventory/product-list/product/product.component';
+import { DepartmentComponent } from './inventory/product-list/product/department/department.component';
+import { ImageComponent } from './inventory/product-list/product/image/image.component';
+import { PriceComponent } from './inventory/product-list/product/price/price.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +36,14 @@ import { ArticleComponent } from './reddit/article/article.component';
     YouTubeSearchComponent,
     UserItemComponent,
     UserListComponent,
-    ArticleComponent
+    ArticleComponent,
+    BreadcrumpsComponent,
+    NavigationComponent,
+    ProductListComponent,
+    ProductComponent,
+    DepartmentComponent,
+    ImageComponent,
+    PriceComponent
   ],
   imports: [
     BrowserModule,

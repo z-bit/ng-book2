@@ -1,0 +1,15 @@
+<div class="product-row">
+  <app-price [price]="product.price"></app-price>
+  <app-image [url]="product.imageUrl"></app-image>
+  <div class="content">
+    <div class="header">{{product.name}}</div>
+    <div class="meta">
+      <div class="product-sku">
+        {{product.sku}}
+      </div>
+    </div>
+    <div class="description">
+      <app-department [product]="product"></app-department>
+    </div>
+  </div>
+</div>

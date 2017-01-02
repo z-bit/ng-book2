@@ -1,3 +1,7 @@
-<p>
-  inventory works!
-</p>
+<h1>Inventory</h1>
+
+<app-product-list class="products-list"
+    [products]="products"
+    (onProductWasSelected)="productWasSelected($event)"
+></app-product-list>
+
