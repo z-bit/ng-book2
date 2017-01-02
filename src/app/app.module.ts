@@ -13,6 +13,8 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { FormsComponent } from './forms/forms.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
+import { youTubeServiceInjectables } from './you-tube-search/you-tube-search.component';
+
 import { UserItemComponent } from './hello-world/user-list/user-item/user-item.component';
 import { UserListComponent } from './hello-world/user-list/user-list.component';
 import { ArticleComponent } from './reddit/article/article.component';
@@ -23,6 +25,8 @@ import { ProductComponent } from './inventory/product-list/product/product.compo
 import { DepartmentComponent } from './inventory/product-list/product/department/department.component';
 import { ImageComponent } from './inventory/product-list/product/image/image.component';
 import { PriceComponent } from './inventory/product-list/product/price/price.component';
+import { SearchBoxComponent } from './you-tube-search/search-box/search-box.component';
+import { SearchResultComponent } from './you-tube-search/search-result/search-result.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,10 @@ import { PriceComponent } from './inventory/product-list/product/price/price.com
     ProductComponent,
     DepartmentComponent,
     ImageComponent,
-    PriceComponent
+    PriceComponent,
+    SearchBoxComponent,
+    SearchResultComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,9 @@ import { PriceComponent } from './inventory/product-list/product/price/price.com
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+      youTubeServiceInjectables,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
