@@ -37,5 +37,9 @@ export class InventoryComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  productWasSelected(product: Product): void {
+    console.log('Product clicked: ', product);
+  }
 
 }
