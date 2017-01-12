@@ -1,0 +1,8 @@
+img {
+    width: 200px;
+}
+.img {
+    float: left;
+    padding: 20px;
+}
+.text { float: left; }

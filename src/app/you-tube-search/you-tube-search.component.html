@@ -1,3 +1,27 @@
-<p>
-  you-tube-search works!
-</p>
+<div class="ui grid">
+    <div class="row">
+        <h1>
+            YouTube Search
+            <img
+                style="float: right;"
+                *ngIf="loading"
+                src='${loadingGif}'>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="input-group input-group-lg col-md-12">
+            <app-search-box
+                (loading)="loading = $event"
+                (results)="updateResults($event)"
+            ></app-search-box>
+        </div>
+    </div>
+
+    <div class="result">
+        <app-search-result
+            *ngFor="let result of results"
+            [result]="result"
+        ></app-search-result>
+    </div>
+</div>

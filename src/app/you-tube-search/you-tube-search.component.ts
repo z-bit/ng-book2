@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 export const YOUTUBE_API_KEY: string = 'AIzaSyDY1XRl66j1Nqz4uHYiQKzg-AElVwQJ_EU';
 export const YOUTUBE_API_URL: string = 'https://www.googleapis.com/youtube/v3/search';
+let loadingGif: string = ((<any>window).__karma__) ? '' : require('../../assets/images/loading.gif');
 
 export var youTubeServiceInjectables: Array<any> = [
   {provide: YouTubeService, useClass: YouTubeService},
@@ -22,7 +23,7 @@ export class YouTubeService {
     let params: string = [
         `q=${query}`,
         `key=${this.apiKey}`,
-        `part-snippet`,
+        `part=snippet`,
         `type=video`,
         `maxResults=10`
     ].join('&');
@@ -69,10 +70,16 @@ export class SearchResult {
   styleUrls: ['./you-tube-search.component.css']
 })
 export class YouTubeSearchComponent implements OnInit {
-
+  results: SearchResult[];
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  updateResults(results: SearchResult[]): void {
+    this.results = results;
+    // console.log("results: ", this.results);
   }
+
+
 
 }

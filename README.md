@@ -16,5 +16,8 @@ This project was generated with [angular-cli](https://github.com/angular/angular
     * see [TODO-list](./docu/todos.md) for improving usage of semantic-ui
 * ng generate component home ...(and all the components you can think of)
 * [Define basic routing](./docu/routing.md)
+* since the book switches to bootstrap here the link to be added to ***/src/index.html***:
+ 
+```<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">```
 
  

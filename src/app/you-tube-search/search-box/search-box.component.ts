@@ -1,8 +1,6 @@
-import { Component, OnInit, EventEmitter, ElementRef } from '@angular/core';
+import { Component, OnInit, EventEmitter, ElementRef, Output } from '@angular/core';
 import { SearchResult, YouTubeService } from '../you-tube-search.component';
 import { Observable } from 'rxjs';
-
-
 
 @Component({
   selector: 'app-search-box',
@@ -11,8 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class SearchBoxComponent implements OnInit {
 
-  loading: EventEmitter<boolean> = new EventEmitter<boolean>();
-  results: EventEmitter<SearchResult[]> = new EventEmitter<SearchResult[]>();
+  @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() results: EventEmitter<SearchResult[]> = new EventEmitter<SearchResult[]>();
 
   constructor(
       private youtube: YouTubeService,
@@ -25,6 +23,7 @@ export class SearchBoxComponent implements OnInit {
         .fromEvent(this.el.nativeElement, 'keyup')
         .map( (e: any) => e.target.value )            // extract value of input
         .filter( (text: string) => text.length > 1 )  // skip empty value
+  //      .do( (text: string) => console.log('text: ', text) )
         .debounceTime(250)                            // only once every 250 ms
         .do( () => this.loading.next(true) )          // enable loading
         .map( (query: string) => this.youtube.search(query) ) // search

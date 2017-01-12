@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SearchResult } from '../you-tube-search.component';
+
 
 @Component({
   selector: 'app-search-result',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-result.component.css']
 })
 export class SearchResultComponent implements OnInit {
-
+  @Input() result: SearchResult;
   constructor() { }
 
   ngOnInit() {

@@ -14,6 +14,8 @@ import { FormsComponent } from './forms/forms.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
 import { youTubeServiceInjectables } from './you-tube-search/you-tube-search.component';
+import { YouTubeService } from './you-tube-search/you-tube-search.component';
+
 
 import { UserItemComponent } from './hello-world/user-list/user-item/user-item.component';
 import { UserListComponent } from './hello-world/user-list/user-list.component';
@@ -27,6 +29,11 @@ import { ImageComponent } from './inventory/product-list/product/image/image.com
 import { PriceComponent } from './inventory/product-list/product/price/price.component';
 import { SearchBoxComponent } from './you-tube-search/search-box/search-box.component';
 import { SearchResultComponent } from './you-tube-search/search-result/search-result.component';
+import { BasicComponent } from './routing/basic/basic.component';
+import { MusicComponent } from './routing/music/music.component';
+import { BasicHomeComponent } from './routing/basic/basic-home/basic-home.component';
+import { BasicAboutComponent } from './routing/basic/basic-about/basic-about.component';
+import { BasicContactComponent } from './routing/basic/basic-contact/basic-contact.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +57,11 @@ import { SearchResultComponent } from './you-tube-search/search-result/search-re
     PriceComponent,
     SearchBoxComponent,
     SearchResultComponent,
+    BasicComponent,
+    MusicComponent,
+    BasicHomeComponent,
+    BasicAboutComponent,
+    BasicContactComponent,
 
   ],
   imports: [
@@ -60,6 +72,7 @@ import { SearchResultComponent } from './you-tube-search/search-result/search-re
   ],
   providers: [
       youTubeServiceInjectables,
+      YouTubeService
   ],
   bootstrap: [AppComponent]
 })
